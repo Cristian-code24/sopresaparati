@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Amor ✨</title>
+    
+    <!-- Google Fonts - Puedes cambiar estas fuentes por otras elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- FONDO ANIMADO CON ESTRELLAS Y GALAXIAS -->
+    <div class="stars-background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- SECCIÓN PRINCIPAL - TÍTULO Y MENSAJE DE BIENVENIDA -->
+    <section class="hero-section" id="inicio">
+        <div class="hero-content">
+            <!-- AQUÍ PUEDES CAMBIAR EL TÍTULO PRINCIPAL -->
+            <h1 class="main-title">Para nicole ❤️ ✨</h1>
+            
+            <!-- AQUÍ PUEDES CAMBIAR EL SUBTÍTULO -->
+            <h2 class="subtitle">feliz cumpleaños princesa💕💖</h2>
+            
+            <!-- FRASES ROMÁNTICAS QUE CAMBIAN AUTOMÁTICAMENTE -->
+            <div class="romantic-quotes">
+                <!-- AQUÍ PUEDES CAMBIAR LAS FRASES ROMÁNTICAS - Edítalas en script.js -->
+                <p class="quote" id="romantic-quote">Cargando mensaje de amor...</p>
+            </div>
+            
+            <!-- BOTÓN PARA INICIAR EL VIAJE -->
+            <button class="start-journey-btn" onclick="scrollToSection('galeria')">
+                <i class="fas fa-heart"></i> Comenzar Nuestro Viaje
+            </button>
+        </div>
+        
+        <!-- CORAZONES FLOTANTES ANIMADOS -->
+        <div class="floating-hearts">
+            <div class="heart">💖</div>
+            <div class="heart">💕</div>
+            <div class="heart">💘</div>
+            <div class="heart">💝</div>
+            <div class="heart">🌟</div>
+        </div>
+    </section>
+
+    <!-- RELOJ DE TIEMPO JUNTOS -->
+    <section class="time-together" id="tiempo">
+        <div class="container">
+            <h2 class="section-title">Nuestro Tiempo Juntos</h2>
+            <div class="time-display">
+                <div class="time-box">
+                    <span class="time-number" id="days">0</span>
+                    <span class="time-label">Días</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="hours">0</span>
+                    <span class="time-label">Horas</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="minutes">0</span>
+                    <span class="time-label">Minutos</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-number" id="seconds">0</span>
+                    <span class="time-label">Segundos</span>
+                </div>
+            </div>
+            <!-- AQUÍ PUEDES CAMBIAR EL MENSAJE DEL RELOJ -->
+            <p class="time-message">Desde el 2 de julio de 2025, cada segundo contigo es mágico ✨</p>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE FOTOS CON CARRUSEL -->
+    <section class="gallery-section" id="galeria">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Nuestros Momentos Especiales</h2>
+            
+            <div class="photo-carousel">
+                <!-- AQUÍ CAMBIAS TUS FOTOS - Reemplaza "imagen1.jpg", "imagen2.jpg", etc. -->
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="fotos/teamo.jpg" alt="Nuestro primer momento juntos" class="carousel-image">
+                        <div class="slide-caption">
+                            <!-- AQUÍ PUEDES CAMBIAR LA DESCRIPCIÓN DE LA FOTO -->
+                            <p>Nuestro primer momento mágico juntos 💕</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="fotos/btss.jpg" alt="Recuerdo especial" class="carousel-image">
+                        <div class="slide-caption">
+                            <!-- AQUÍ PUEDES CAMBIAR LA DESCRIPCIÓN DE LA FOTO -->
+                            <p>Cuando supe que eras mi alma gemela ✨</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="fotos/rosa.png" alt="Momento romántico" class="carousel-image">
+                        <div class="slide-caption">
+                            <!-- AQUÍ PUEDES CAMBIAR LA DESCRIPCIÓN DE LA FOTO -->
+                            <p>Cada día contigo es una aventura 🌟</p>
+                        </div>
+                    </div>
+                    
+                    <!-- PUEDES AGREGAR MÁS FOTOS COPIANDO ESTA ESTRUCTURA -->
+                    <div class="carousel-slide">
+                        <img src="fotos/ramo.jpg" alt="Otro momento especial" class="carousel-image">
+                        <div class="slide-caption">
+                            <p>Tu sonrisa ilumina mi mundo 🌈</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CONTROLES DEL CARRUSEL -->
+                <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- INDICADORES DEL CARRUSEL -->
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="goToSlide(0)"></span>
+                    <span class="indicator" onclick="goToSlide(1)"></span>
+                    <span class="indicator" onclick="goToSlide(2)"></span>
+                    <span class="indicator" onclick="goToSlide(3)"></span>
+                    <!-- AGREGA MÁS INDICADORES SI TIENES MÁS FOTOS -->
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- SECCIÓN DE VIDEOS -->
+<section class="videos-section" id="videos">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Nuestras Canciones Especiales</h2>
+        
+        <div class="videos-grid" style="display:flex; justify-content:center;">
+            <!-- VIDEO 1 -->
+            <div class="video-container animate-on-scroll" 
+                 style="max-width:320px; text-align:center;">
+                 
+                <h3 class="video-title">Nuestra Canción ✨</h3>
+
+                <!-- Miniatura más pequeña -->
+                <img src="https://img.youtube.com/vi/Co6FPMKV2c4/0.jpg" 
+                     alt="Miniatura del video"
+                     style="width:100%; border-radius:10px;">
+
+                <!-- Botón más compacto -->
+                <a href="https://youtu.be/Co6FPMKV2c4" 
+                   target="_blank"
+                   style="
+                      display:inline-block;
+                      margin-top:10px;
+                      padding:8px 16px;
+                      background-color:#ff4b5c;
+                      color:white;
+                      font-weight:bold;
+                      font-size:14px;
+                      text-decoration:none;
+                      border-radius:8px;
+                      transition:0.3s;">
+                   🎥 Ver en YouTube
+                </a>
+
+                <p class="video-description" style="font-size:14px; margin-top:8px;">
+                    La canción que me recuerda a ti cada día 💕
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO 2 -->
+<div class="video-container animate-on-scroll" 
+     style="max-width:320px; text-align:center; margin:auto;">
+    
+    <h3 class="video-title">Cuando Pienso en Ti 💖</h3>
+
+    <!-- Miniatura más pequeña -->
+    <img src="https://img.youtube.com/vi/z0701vzvrco/0.jpg" 
+         alt="Miniatura del video" 
+         style="width:100%; border-radius:10px;">
+
+    <!-- Botón más compacto -->
+    <a href="https://youtu.be/z0701vzvrco" 
+       target="_blank" 
+       style="
+          display:inline-block;
+          margin-top:10px;
+          padding:8px 16px;
+          background-color:#ff4b5c;
+          color:white;
+          font-weight:bold;
+          font-size:14px;
+          text-decoration:none;
+          border-radius:8px;
+          transition:background 0.3s;">
+       🎥 Ver en YouTube
+    </a>
+
+    <p class="video-description" style="font-size:14px; margin-top:8px;">
+        Cada momento contigo es único y especial 🌹✨🌟
+    </p>
+</div>
+
+    <!-- BOTONES SORPRESA -->
+    <section class="surprise-section" id="sorpresas">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Sorpresas Para Ti</h2>
+            
+            <div class="surprise-buttons">
+                <!-- BOTÓN SORPRESA 1 -->
+                <button class="surprise-btn" onclick="showSurprise(1)">
+                    <i class="fas fa-gift"></i>
+                    Sorpresa #1
+                </button>
+                
+                <!-- BOTÓN SORPRESA 2 -->
+                <button class="surprise-btn" onclick="showSurprise(2)">
+                    <i class="fas fa-heart"></i>
+                    Sorpresa #2
+                </button>
+                
+                <!-- BOTÓN SORPRESA 3 -->
+                <button class="surprise-btn" onclick="showSurprise(3)">
+                    <i class="fas fa-star"></i>
+                    Sorpresa #3
+                </button>
+            </div>
+            
+<!-- MENSAJES OCULTOS DE LAS SORPRESAS -->
+<div class="surprise-messages">
+    <div class="surprise-message" id="surprise-1">
+        <h3>🎂💕 ¡Feliz Cumpleaños, Mi Amor! 💕🎂</h3>
+        <p>
+            Hoy es un día tan especial como tú 💖.  
+            Gracias por ser la razón de mi felicidad y por hacer mi vida más hermosa.  
+            Te deseo un cumpleaños lleno de amor, sonrisas y momentos mágicos ✨.  
+            Eres mi mayor regalo y mi sueño más bonito. ¡Te amo! ❤️🎉🎁
+        </p>
+    </div>
+</div>
+<div class="surprise-message" id="surprise-2">
+    <h3>💌 Segunda Sorpresa</h3>
+    <p>
+        Prometo estar a tu lado en cada alegría y cada reto de la vida 💕.  
+        Hoy, en tu cumpleaños, quiero recordarte que siempre serás mi persona favorita,  
+        mi razón de sonreír y mi mayor felicidad. ¡Te amo con todo mi corazón! ❤️
+    </p>
+</div>
+
+<div class="surprise-message" id="surprise-3">
+    <h3>🌟 Tercera Sorpresa</h3>
+    <p>
+        Mi mayor deseo para ti es que cada día esté lleno de felicidad,  
+        amor y sueños cumplidos ✨.  
+        Hoy no solo celebro tu cumpleaños, sino también lo afortunado que soy  
+        de tenerte en mi vida 💖.  
+        ¡Gracias por ser mi razón de sonreír, mi apoyo y mi todo! ❤️🎉
+    </p>
+</div>
+
+    <!-- CARTA FINAL CON EFECTO MÁQUINA DE ESCRIBIR -->
+    <section class="letter-section" id="carta">
+        <div class="container">
+            <div class="letter-container animate-on-scroll">
+                <h2 class="letter-title">Una Carta Especial Para Ti</h2>
+                
+                <div class="letter-content">
+                    <!-- AQUÍ PUEDES CAMBIAR EL CONTENIDO DE LA CARTA -->
+                    <p class="letter-text" id="typewriter-text"></p>
+                    <div class="letter-signature">
+                        <!-- AQUÍ PUEDES CAMBIAR LA FIRMA -->
+                        <p>Con todo mi amor,</p>
+                        <p class="signature-name">cristian 💕</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="container">
+            <!-- AQUÍ PUEDES CAMBIAR EL MENSAJE FINAL -->
+            <p>Hecho con 💕 para la persona más especial del mundo</p>
+            <div class="footer-hearts">
+                💖 ✨ 💕 🌟 💘
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA AMPLIAR IMÁGENES -->
+    <div class="image-modal" id="imageModal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-image" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+    </div>
+
+    <!-- ARCHIVO JAVASCRIPT -->
+    <script src="script.js"></script>
+</body>
+</html>
